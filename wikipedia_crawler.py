@@ -7,7 +7,7 @@ import urllib.request
 
 # url = 'https://de.wikipedia.org/wiki/42_(Antwort)'
 default_url = 'https://en.wikipedia.org/wiki/Phrases_from_The_Hitchhiker%27s_Guide_to_the_Galaxy#Answer_to_the_Ultimate_Question_of_Life,_the_Universe,_and_Everything_(42)'
-url = str(input('Wikipedia URL to scrape: ') or default_url)
+url = str(input('Wikipedia URL to scrape (default: 42): ') or default_url)
 response = get(url)
 html_soup = BeautifulSoup(response.text, 'html.parser')
 print('Getting title...')
